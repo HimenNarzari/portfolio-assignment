@@ -166,16 +166,19 @@ ul li {
 
   @media (max-width: 425px){
     #hero_text h3{
-        font-size: 14px;
+        font-size: 1.2rem;
         font-weight: 300;
     }
     #hero_text h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     #hero_text a{
-        font-size: 14px;
+        font-size: 1.2rem;
         font-weight: 300;
         padding:5px 10px;
+    }
+    #hero_image img {
+      max-width: 15rem;
     }
   }
 
