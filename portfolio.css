@@ -226,11 +226,11 @@ li a {
 }
 
 #hero_text h1 span {
-    color:#002f63;
-    border-right: 2px solid rgb(255, 255, 255);
+    border-right: 3px solid #002f63;
     white-space: nowrap;
     overflow: hidden;
     animation: blink-caret 0.7s step-end infinite;
+    padding-right:4px;
 }
 
 
