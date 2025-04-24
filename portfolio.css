@@ -304,13 +304,16 @@ li a {
 
     #hero_text h1 {
         font-size: 2.4rem;
-        color:white;
     }
 
     #hero_text a {
         font-size: 1.2rem;
         font-weight: 300;
-        padding: 5px 10px;
+        padding: 5px 
+        10px;
+    }
+    #hero{
+        height: fit-content;
     }
 }
 
@@ -416,9 +419,11 @@ p {
     width: 100%;
 }
 
-@media (max-width:768px) {
+@media (max-width:1076px) {
     #about {
-        margin-top: 30%
+        margin-top: 10%;
+        overflow-y:hidden;
+        height: fit-content;
     }
 
     #about .container {
@@ -438,93 +443,38 @@ p {
     }
 }
 
+@media (max-width: 540px) {
+    #about-left{
+        flex-direction: column;
+       
+    }
+    .tech{
+        width:100%;
+        border:none;
+
+    }
+    .hobbies{
+        width:100%;
+        border:none;
+    }
+    .hobbies span{
+        margin-top:20px;
+    }
+    .logos{
+        width:50px;
+        margin:0 15px;
+        height:fit-content;
+    }
+    #about_right{
+        padding-top:20px;
+    }
+    #about{
+       
+    }
+}
+
 /* ----- Projects Section ----- */
 
-#projects {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-#projects .container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5%;
-}
-
-#proj_text {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#proj_image {
-    width: fit-content;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider {
-    width: 600px;
-    height: 300px;
-    border-radius: 10px;
-    background: url('proj_img/2-re.png');
-    animation: slide 10s infinite;
-}
-
-@keyframes slide {
-    25% {
-        background: url('proj_img/3-re.png');
-    }
-
-    50% {
-        background: url('proj_img/4-re.png');
-    }
-
-    75% {
-        background: url('proj_img/5-re.png');
-    }
-
-    100% {
-        background: url('proj_img/2-re.png');
-    }
-}
-
-#proj_image img:hover {
-    transform: scale(1.02);
-}
-
-
-@media (max-width:768px) {
-    #projects {
-        height: 100vh;
-        margin-top: 30%;
-    }
-
-    #proj_text {
-        width: 100%;
-    }
-
-    #proj_image {
-        width: 100%;
-    }
-
-    #projects .container {
-        flex-direction: column;
-        margin-top: 5%;
-    }
-}
 
 /* ----- Contacts Section ----- */
 
