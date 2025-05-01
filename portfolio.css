@@ -4,7 +4,7 @@
     color: white;
     text-decoration: none;
     word-spacing: .15em;
-    overflow-x: hidden;
+    
 }
 
 html {
@@ -13,7 +13,7 @@ html {
 
 body {
     background-color: #08090a;
-    font: bold 16px/1.4 'Open Sans', arial, sans-serif;
+    font: 16px/1.4 'Open Sans', arial, sans-serif;
 }
 
 #navbar {
@@ -23,9 +23,10 @@ body {
     padding: 20px 10%;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: absolute;
     z-index: 1000;
-    overflow: visible
+    overflow: visible;
+    width:80%;
 }
 
 #navbar .logo {
@@ -192,7 +193,7 @@ li a {
 /* ----- Hero Section ----- */
 
 #hero {
-    height: 90vh;
+    height: 100vh;
     max-width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -223,6 +224,7 @@ li a {
 #hero_text h1 {
     font-size: 4rem;
     height: fit-content;
+    font-weight:700;
 }
 
 #hero_text h1 span {
@@ -240,10 +242,16 @@ li a {
     }
 }
 
+#hero_text h4{
+    letter-spacing:0.5px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
 #hero_text a {
-    font-size: 1.5rem;
+    font-size: 16px;
     font-weight: 300;
-    padding: 10px 20px;
+    padding: 5px 10px;
 }
 
 
@@ -265,6 +273,7 @@ li a {
         display: grid;
         grid-template-columns: 1fr;
         text-align: center;
+        padding-top:100px;
     }
 
     #hero_text h3 {
@@ -274,12 +283,6 @@ li a {
 
     #hero_text h1 {
         font-size: 3.5rem;
-    }
-
-    #hero_text a {
-        font-size: 1.6rem;
-        font-weight: 300;
-        padding: 5px 10px;
     }
 
     #hero_text {
@@ -306,12 +309,14 @@ li a {
         font-size: 2.4rem;
     }
 
-    #hero_text a {
-        font-size: 1.2rem;
-        font-weight: 300;
-        padding: 5px 
-        10px;
+    #hero_text h4{
+        font-size: 16px;
     }
+
+    #hero_text a{
+        font-size: 16px;
+    }
+
     #hero{
         height: fit-content;
     }
@@ -325,11 +330,11 @@ li a {
     text-align: center;
     font-weight: bold;
     margin-bottom: 2%;
+    overflow-y: hidden;
 }
 
 #about {
     height: 100vh;
-    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -378,6 +383,11 @@ li a {
     border-right: 2px solid #002f63;
 }
 
+.container span{
+    overflow-y: hidden;
+    
+}
+
 .hobbies {
     display: flex;
     flex-direction: column;
@@ -417,6 +427,9 @@ p {
     float: right;
     align-items: center;
     width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 @media (max-width:1076px) {
@@ -474,6 +487,75 @@ p {
 }
 
 /* ----- Projects Section ----- */
+#projects{
+    height: 100vh;
+   
+    display: flex;
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5%;
+}
+
+#projects-container{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project{
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.project p,strong{
+    font-size: 16px;
+    font-weight: 400px;   
+}
+
+.project p{
+    padding-left:100px;
+    width:60%;
+}
+
+.img{
+    width:40%;
+    height:fit-content;
+}
+.img img{
+    width:400px;
+}
+
+@media (max-width: 1520px) {
+    .img{
+        width:45%;
+    }
+    .project p{
+        width:55%;
+    }
+}
+
+@media (max-width: 1076px) {
+    .project{
+        flex-direction: column;
+    }
+    .project p{
+        width:100%;
+    }
+    .img{
+        width:100%;
+    }
+}
+
 
 
 /* ----- Contacts Section ----- */
@@ -496,7 +578,7 @@ p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-bottom: 3%;
+    overflow: hidden;
 }
 
 .social-icons {
@@ -504,8 +586,7 @@ p {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    padding-left: 40px;
+    width: 250px;
 }
 
 .social-icons a {
@@ -515,8 +596,12 @@ p {
 
 .social_logos {
     height: 25px;
+    width:fit-content;
     transition: .2s;
     margin: auto 3px;
+}
+.email p{
+    padding-bottom:3.5px;
 }
 
 .social_logos:hover {
@@ -562,13 +647,13 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    padding-left:10px;
 }
 
-form input,
+form .input-box,
 form textarea {
-    width: 100%;
+    width: 90%;
     border: 0;
     outline: none;
     background: #262626;
@@ -577,6 +662,7 @@ form textarea {
     color: #fff;
     font-size: 18px;
     border-radius: 6px;
+    overflow-x: auto;
 }
 
 .subtitle {
@@ -607,6 +693,10 @@ form textarea {
 .icon-text {
     display: flex;
     flex-direction: column;
+}
+
+.icon-text div{
+    height:fit-content;
 }
 
 .email {
@@ -673,7 +763,7 @@ form textarea {
     align-items: center;
 }
 
-@media (max-width:768px) {
+@media (max-width:1024px) {
     #contact {
         margin-top: 10%;
         height: fit-content;
@@ -684,11 +774,11 @@ form textarea {
         width: 120%
     }
 
-    #contact-left {
+    .contact-left {
         width: 100%;
     }
 
-    #contact_right {
+    .contact_right {
         width: 100%;
     }
 
@@ -705,6 +795,12 @@ footer {
     position: relative;
 }
 
+.social_logos, .email p{
+    margin-top:10px;
+}
+.email p{
+    padding-top:3px;
+}
 @media (max-width:768px) {
     footer p {
         padding-top: 120px
@@ -721,14 +817,17 @@ footer {
     p {
         font-size: 0.9em;
     }
-}
-
-@media (max-width:668px) {
-    #about {
-        margin-top: 30%;
-    }
-
-    #projects {
-        margin-top: 20%;
+    .subtitle{
+        width:100%;
+        text-align: center;
     }
 }
+
+@media (max-width: 540px){
+    .subtitle{
+        font-size: 2rem;
+    }
+    .container .contact-left p,.container .contact-right input{
+        font-size: 16px;
+    }
+} 
