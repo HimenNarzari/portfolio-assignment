@@ -38,3 +38,20 @@ function type() {
 }
 
 type();
+
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value;
+
+  const fullMessage = `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`;
+  const encodedMessage = encodeURIComponent(fullMessage);
+
+  const phoneNumber = "917086667640";
+  const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  window.open(url, "_blank");
+});
