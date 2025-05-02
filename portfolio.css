@@ -489,8 +489,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 5% 10%;
+    padding: 0 10%;
 }
 
 #projects .heading{
