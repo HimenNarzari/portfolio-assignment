@@ -839,6 +839,9 @@ form textarea {
         width: 100%;
         padding-left:0;
     }
+    .right-items input, #text-area{
+        margin:10px 0;
+     }
 }
 
 footer p {
@@ -875,6 +878,15 @@ footer {
         width:100%;
         text-align: center;
     }
+    .right-items input, #text-area{
+        margin:5px 0;
+     }
+     .left-items .btns{
+        margin-top:0;
+     }
+     .btns .btn{
+        margin-top:5px;
+     }
 }
 
 @media (max-width: 540px){
@@ -887,4 +899,16 @@ footer {
     .contact-right{
         width: 70%;
     }
+    .social-icons{
+        justify-content: flex-start;
+    }
+    .social_logos {
+        height: 20px;
+    }
+    .email p{
+        margin-top:8px;
+    }
+    .btns .btn{
+        padding:8px 25px
+     }
 } 
