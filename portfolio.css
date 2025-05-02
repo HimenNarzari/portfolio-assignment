@@ -485,10 +485,16 @@ p {
 
 /* ----- Projects Section ----- */
 #projects {
+    height:100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 5% 10%;
+}
+
+#projects .heading{
+    margin-bottom:15%;
 }
 
 #projects-container {
