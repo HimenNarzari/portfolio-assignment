@@ -831,7 +831,7 @@ form textarea {
 
     .contact_right {
         width: 100%;
-       
+        justify-content: center;
     }
 
     .right-items {
@@ -894,6 +894,12 @@ footer {
     }
     .container .contact-left p,.container .contact-right input{
         font-size: 14px;
+    }
+    .contact-left{
+        width: 70%;
+    }
+    .left-items{
+        width:100%;
     }
     .contact-right{
         width: 70%;
