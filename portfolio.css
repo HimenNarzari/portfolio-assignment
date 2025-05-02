@@ -421,15 +421,12 @@ li a {
 .logos {
     height: 60px;
     transition: .2s;
-    margin: 20px
+    margin: 20px 20px;
 }
 
-.logos:hover {
-    transition: scale(1.09);
-}
 
 p {
-    font-size: medium;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
@@ -492,7 +489,7 @@ p {
     }
     .logos{
         width:50px;
-        margin:0 15px;
+        margin:10px 15px;
         height:fit-content;
     }
     #about_right{
