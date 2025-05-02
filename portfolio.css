@@ -620,8 +620,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 5% 10%;
 }
 
 .container {
@@ -911,4 +910,7 @@ footer {
     .btns .btn{
         padding:8px 25px
      }
+     .icon-text div{
+        height:40px;
+    }
 } 
