@@ -1,154 +1,459 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding-left: 0;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We Animals Tezpur</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css" class="css">
-</head>
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
 
-<body>
-    <div id="preloader">
-        <div class="preloader-content">
-            <img src="dog_running2.gif" alt="Loading..." />
-            <p class="loading-text">Loading...</p>
-        </div>
-    </div>
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#preloader img {
+    width: 100%;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 3rem;
+    color: #444;
+    font-weight: 500;
+    font-family: sans-serif;
+    animation: fadeText 1.5s ease-in-out infinite, slideUpDown 1.5s ease-in-out infinite;
+}
+
+/* Fade in/out */
+@keyframes fadeText {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Subtle vertical text movement */
+@keyframes slideUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Bounce animation for the GIF */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
 
-    <header>
-        <div><img src="we-animals-logo.png" alt="logo"></div>
-        <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="nav-links">
-            <a href="#about">About us</a>
-            <a href="#services">Services</a>
-            <a href="#dog">Help us</a>
-            <a href="#work">Our work</a>
 
-            <button class="btn">Donate<svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                        d="M224 24l0 56-56 0c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l56 0 0 56c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-56 56 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-56 0 0-56c0-13.3-10.7-24-24-24L248 0c-13.3 0-24 10.7-24 24zM559.7 392.2c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416 272 416c-8.8 0-16-7.2-16-16s7.2-16 16-16l16 0 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0-16 0-78.3 0c-29.1 0-57.3 9.9-80 28L68.8 384 32 384c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l160 0 160.5 0c29 0 57.3-9.3 80.7-26.5l126.6-93.3zm-367-8.2l.9 0c0 0 0 0 0 0c-.3 0-.6 0-.9 0z" />
-                </svg></button>
-        </nav>
-    </header>
+body {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-    <section class="hero">
+@font-face {
+    font-family: 'Darling Coffee';
+    src: url('darling_coffee/Darling Coffee.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    </section>
+/* navbar */
 
-    <section id="about" class="section">
-        <h2>ABOUT US</h2>
-        <div class="about-section">
-            <iframe id="iframe" src="https://www.youtube.com/embed/iiHTZSdemYQ?si=MNP4q4yNbAkjVoqx"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-            <div>
-                <p>At <strong>We Animals Tezpur</strong>, we believe every life matters—whether it walks on two legs or
-                    four. Founded
-                    with love and compassion, our mission is to rescue, protect, and care for the voiceless animals in
-                    and around Tezpur. From emergency rescues to vaccinations, feeding programs, and medical treatments,
-                    our dedicated team of volunteers works tirelessly to ensure that stray and abandoned animals get a
-                    second chance at life.</p>
-                <p>We operate entirely on community support and kind donations—no sponsors, no big backers—just pure
-                    heart. Whether it's helping an injured pup, spreading awareness about sterilization, or finding
-                    forever homes through adoptions, we're committed to making Tezpur a kinder place for animals.</p>
-                <p><strong>Join us. Volunteer. Donate. Speak up.</strong></p>
-                <p>Together, we can build a community where every animal is seen, heard, and loved.</p>
-            </div>
-        </div>
-        <h3>Our <span>IMPACT</span> So Far</h3>
-        <div class="impact">
-            <div><i class="fa-solid fa-syringe pulse fa-4x"></i><strong class="count"
-                    data-target="1000">0</strong><br>Vaccinations Done</div>
-            <div><i class="fa-solid fa-kit-medical pulse fa-4x"></i><strong class="count"
-                    data-target="1500">0</strong><br>Rescues Done</div>
-            <div><i class="fa-solid fa-dog pulse fa-4x"></i><strong class="count"
-                    data-target="90">0</strong><br>Adoptions/month</div>
-            <div><i class="fa-solid fa-bowl-food pulse fa-4x"></i><strong class="count"
-                    data-target="500">0</strong><br>Dogs Fed</div>
-        </div>
+header {
+    background: #000;
+    color: white;
+    padding: 10px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    </section>
+header div img {
+    width: 80px;
+}
 
-    <section id="services" class="section services">
-        <h2>SERVICES</h2>
-        <div class="impact">
-            <div>
-                <img src="https://via.placeholder.com/100" alt="Grooming">
-                <p>Grooming at home</p>
-                <button class="btn">Enquire</button>
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/100" alt="Vaccination">
-                <p>Vaccination at home</p>
-                <button class="btn">Enquire</button>
-            </div>
-        </div>
-    </section>
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative;
+}
 
-    <div id="dog" class="dogs">
-        <img src="dogs_.png" alt="">
-    </div>
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    /* Adjust thickness of the underline */
+    background-color: #e40f24;
+    /* Underline color */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
 
-    <section id="help" class="help">
-        <h2 style="text-align: center;">HELP US MAKE A DIFFERENCE</h2>
-        <p style="width:80%">Every day, countless animals suffer alone — abandoned, injured, or abused.
-            At We Animals Tezpur, we step in where no one else will — to rescue, heal, and give them the love they
-            deserve.
+nav a:hover::after {
+    left: 0;
+    width: 105%;
+    /* Extend to full width */
+}
 
-            Your support can mean the world to a voiceless soul.
-            🧡 Join hands with us — volunteer, donate, adopt, or simply spread the word. 🧡</p>
-        <div class="help-btn-container">
-            <button class="btn">Donate<svg xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                    <path
-                        d="M224 24l0 56-56 0c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l56 0 0 56c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-56 56 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-56 0 0-56c0-13.3-10.7-24-24-24L248 0c-13.3 0-24 10.7-24 24zM559.7 392.2c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416 272 416c-8.8 0-16-7.2-16-16s7.2-16 16-16l16 0 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0-16 0-78.3 0c-29.1 0-57.3 9.9-80 28L68.8 384 32 384c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l160 0 160.5 0c29 0 57.3-9.3 80.7-26.5l126.6-93.3zm-367-8.2l.9 0c0 0 0 0 0 0c-.3 0-.6 0-.9 0z" />
-                </svg></button>
-            <button class="btn">Adopt <i class="fa-solid fa-shield-dog"></i></button>
-            <button class="btn">Volunteer <i class="fa-solid fa-handshake-angle"></i></button>
-        </div>
-    </section>
+.btn svg {
+    fill: white;
+    width: 15px;
+    padding-left: 5px;
 
-    <section id="work" class="section">
-        <h2>OUR WORK</h2>
-        <div class="gallery">
-            <blockquote class="instagram-media"
-                data-instgrm-permalink="https://www.instagram.com/p/DIdetItv2Qp/?igsh=MXFzeG4zNThlN2hyZg=="
-                data-instgrm-version="14"></blockquote>
-            <blockquote class="instagram-media"
-                data-instgrm-permalink="https://www.instagram.com/p/DIcAlTWO7Lk/?igsh=MTI0ajZ6aXowd3M0OA=="
-                data-instgrm-version="14"></blockquote>
-            <blockquote class="instagram-media"
-                data-instgrm-permalink="https://www.instagram.com/reel/DHil15DTkGk/?igsh=MXJ3MmY2OW0yeHQ2ag=="
-                data-instgrm-version="14"></blockquote>
-        </div>
-        <button class="btn">Explore <i class="fa fa-external-link" aria-hidden="true"></i></button>
-    </section>
+}
 
-    <footer>
-        <p><strong>We Animals Tezpur</strong> – Rescuing and caring for the voiceless with love and dedication.</p>
-        <p><strong>Contact:</strong> Tezpur, Assam, India | Email: weanimalstezpur@gmail.com</p>
-        <p>Website designed by Himen Narzari, MCA – Tezpur University</p>
-        <p>&copy; 2025 We Animals Tezpur. All rights reserved.</p>
-        <p>
-            <a class="footer-logo" href="https://www.facebook.com/WE.animalsfoundation/" target="_blank"><i
-                    class="fa-brands fa-facebook"></i></a>
-            <a class="footer-logo" href="https://www.instagram.com/we.animals.tezpur/" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a class="footer-logo" href="https://youtube.com/@weanimalstezpur?si=EuKfE5S5jquA2d9q" target="_blank"><i
-                    class="fa-brands fa-youtube"></i></a>
-        </p>
-    </footer>
-    <script async src="//www.instagram.com/embed.js"></script>
-    <script src="script.js"></script>
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
 
-</body>
+/* image-slider */
 
-</html>
+.hero {
+    background: #444;
+    width: 100%;
+    margin: auto;
+    display: block;
+    inset: 0px;
+    padding: inherit;
+    aspect-ratio: 16/9;
+    max-height: 450px;
+    ;
+}
+
+/* about-section */
+
+iframe {
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.section {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.section p {
+    padding-bottom: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: start;
+    font-size: 14px;
+    width: 100%;
+}
+
+.about-section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.about-section div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+#iframe {
+    aspect-ratio: 16/9;
+    width: 50%;
+}
+
+h2 {
+    color: #e40f24;
+    font-weight: 700;
+    font-family: "Darling Coffee";
+    font-size: 3rem;
+    margin: 30px
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h3 span {
+    color: #fecd2f;
+    font-size: 30px;
+}
+
+.impact {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.impact div {
+    background: #fecd2f;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 150px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.impact div p {
+    text-align: center;
+}
+
+.impact div .fa-solid {
+    color: #fe2f2f;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite ease-in-out;
+    display: inline-block;
+}
+
+.impact div strong {
+    font-size: 30px;
+    color: #fe2f2f;
+}
+
+.services img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.btn {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.dogs {
+    padding-top:50px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.dogs img {
+    width: 50%;
+}
+
+.help {
+    background-color: #fecd2f;
+    background-repeat: no-repeat;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.help-btn-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.help .btn {
+    margin: 10px;
+}
+
+#work{
+    padding-top:100px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+
+    align-items: start;
+    place-items: center;
+    width: 100%;
+}
+
+/* .gallery img {
+    width: 100px;
+    border-radius: 8px;
+} */
+
+.instagram-media {
+    height: 550px;
+}
+
+footer {
+    background: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-logo i {
+    font-size: 20px;
+}
+
+@media (max-width: 1320px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-section div {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    iframe {
+        height: 291px;
+        min-width: 517px;
+        margin-bottom: 20px;
+    }
+
+    .dogs img {
+        width: 65%;
+    }
+
+    nav a:hover::after {
+        left: 0;
+        width: 0%;
+        /* Extend to full width */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        right: 10%;
+        width: 150px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    .nav-links a {
+        margin: 5px 10px;
+    }
+
+    .nav-links .btn {
+        width: 85%;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    /* hero-section */
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .hero {
+        max-height: none;
+    }
+
+    iframe {
+        height: 100%;
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-section div {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .dogs img {
+        width: 80%;
+    }
+
+}
