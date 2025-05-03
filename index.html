@@ -1,459 +1,201 @@
-* {
-    margin: 0;
-    padding-left: 0;
-    font-size: 14px;
-    scroll-behavior: smooth;
-}
-
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.preloader-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#preloader img {
-    width: 100%;
-    animation: bounce 1s ease-in-out infinite;
-}
-
-.loading-text {
-    margin-top: 10px;
-    font-size: 3rem;
-    color: #444;
-    font-weight: 500;
-    font-family: sans-serif;
-    animation: fadeText 1.5s ease-in-out infinite, slideUpDown 1.5s ease-in-out infinite;
-}
-
-/* Fade in/out */
-@keyframes fadeText {
-
-    0%,
-    100% {
-        opacity: 0.3;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-/* Subtle vertical text movement */
-@keyframes slideUpDown {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-/* Bounce animation for the GIF */
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-
-
-body {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-@font-face {
-    font-family: 'Darling Coffee';
-    src: url('darling_coffee/Darling Coffee.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* navbar */
-
-header {
-    background: #000;
-    color: white;
-    padding: 10px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header div img {
-    width: 80px;
-}
-
-header nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    position: relative;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    /* Adjust thickness of the underline */
-    background-color: #e40f24;
-    /* Underline color */
-    transition: all 0.3s ease;
-    /* Smooth transition */
-}
-
-nav a:hover::after {
-    left: 0;
-    width: 105%;
-    /* Extend to full width */
-}
-
-.btn svg {
-    fill: white;
-    width: 15px;
-    padding-left: 5px;
-
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
-
-/* image-slider */
-
-.hero {
-    background: #444;
-    width: 100%;
-    margin: auto;
-    display: block;
-    inset: 0px;
-    padding: inherit;
-    aspect-ratio: 16/9;
-    max-height: 450px;
-    ;
-}
-
-/* about-section */
-
-iframe {
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-.section {
-    padding: 50px 10%;
-    text-align: center;
-}
-
-.section p {
-    padding-bottom: 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: start;
-    font-size: 14px;
-    width: 100%;
-}
-
-.about-section {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.about-section div {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding-left: 20px;
-}
-
-#iframe {
-    aspect-ratio: 16/9;
-    width: 50%;
-}
-
-h2 {
-    color: #e40f24;
-    font-weight: 700;
-    font-family: "Darling Coffee";
-    font-size: 3rem;
-    margin: 30px
-}
-
-h3 {
-    font-size: 30px;
-}
-
-h3 span {
-    color: #fecd2f;
-    font-size: 30px;
-}
-
-.impact {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.impact div {
-    background: #fecd2f;
-    padding: 20px;
-    border-radius: 8px;
-    min-width: 150px;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-}
-
-.impact div p {
-    text-align: center;
-}
-
-.impact div .fa-solid {
-    color: #fe2f2f;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(0.9);
-    }
-
-    50% {
-        transform: scale(1);
-    }
-}
-
-.pulse {
-    animation: pulse 2s infinite ease-in-out;
-    display: inline-block;
-}
-
-.impact div strong {
-    font-size: 30px;
-    color: #fe2f2f;
-}
-
-.services img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-
-.btn {
-    background: red;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.dogs {
-    padding-top:50px;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.dogs img {
-    width: 50%;
-}
-
-.help {
-    background-color: #fecd2f;
-    background-repeat: no-repeat;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-}
-
-.help-btn-container {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-
-.help .btn {
-    margin: 10px;
-}
-
-#work{
-    padding-top:100px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-
-    align-items: start;
-    place-items: center;
-    width: 100%;
-}
-
-/* .gallery img {
-    width: 100px;
-    border-radius: 8px;
-} */
-
-.instagram-media {
-    height: 550px;
-}
-
-footer {
-    background: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    margin: 0 5px;
-    text-decoration: none;
-    color: #000;
-}
-
-.footer-logo i {
-    font-size: 20px;
-}
-
-@media (max-width: 1320px) {
-    .about-section {
-        flex-direction: column;
-    }
-
-    .about-section div {
-        padding-right: 0;
-        width: 100%;
-    }
-
-    iframe {
-        height: 291px;
-        min-width: 517px;
-        margin-bottom: 20px;
-    }
-
-    .dogs img {
-        width: 65%;
-    }
-
-    nav a:hover::after {
-        left: 0;
-        width: 0%;
-        /* Extend to full width */
-    }
-
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #000;
-        position: absolute;
-        top: 60px;
-        right: 10%;
-        width: 150px;
-        border: 1px solid #333;
-        border-radius: 5px;
-        z-index: 1000;
-    }
-
-    .nav-links a {
-        margin: 5px 10px;
-    }
-
-    .nav-links .btn {
-        width: 85%;
-        margin-left: 10px;
-        margin-bottom: 5px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    /* hero-section */
-
-    .about-section {
-        flex-direction: column;
-    }
-
-    .hero {
-        max-height: none;
-    }
-
-    iframe {
-        height: 100%;
-        min-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .about-section div {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .dogs img {
-        width: 80%;
-    }
-
-}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <header id="navbar">
+    <div class="logo">
+      <strong>Himen Narzari</strong>
+    </div>
+    <div id="links">
+      <ul>
+        <li class="li_links"><a class="a-tags" href="#about">ABOUT</a></li>
+        <li class="li_links"><a class="a-tags" href="#projects">PROJECTS</a></li>
+        <li class="li_links"><a class="a-tags" href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+    <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+      <path
+        d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z" />
+    </svg>
+
+  </header>
+  <main>
+    <section id="hero">
+      <div id="hero_image">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="blobClip">
+              <path d="M40.6,-64.6C51.7,-56.1,58.9,-43.2,67.8,-29.3C76.7,-15.5,87.1,-0.7,87.8,14.5C88.5,29.7,79.5,45.4,67,56C54.6,66.7,38.8,72.5,22.7,77C6.7,81.6,-9.6,84.9,-22.3,79.5C-34.9,74.1,-43.9,59.9,-52,47C-60.1,34.1,-67.3,22.4,-71.3,8.9C-75.3,-4.5,-75.9,-19.7,-72.3,-35.3C-68.8,-50.9,-61,-66.8,-48.2,-74.5C-35.5,-82.2,-17.7,-81.7,-1.5,-79.4C14.8,-77.1,29.6,-73.1,40.6,-64.6Z"
+                    transform="translate(100 100)" />
+            </clipPath>
+          </defs>
+          <image href="DP-1.jpg" width="100%" height="100%" clip-path="url(#blobClip)" preserveAspectRatio="xMidYMid slice" />
+        </svg>
+      </div>
+      
+      <div id="hero_text">
+        <h3>Hey There!</h3>
+        <h1>I'm a <span id="typewriter"></span></h1>
+        <h4>A passionate web developer who loves clean code, great design, and coffee ☕.</h4>
+        <a class="btn" href="#contact">Let's connect</a>
+      </div>
+
+    </section>
+
+    <!------ about ------>
+
+    <section id="about">
+      <div class="heading">ABOUT ME</div>
+      <div class="container">
+        <div id="about-left">
+          <div class="tech">
+            <span>Skills</span>
+            <div class="svgs">
+              <img class="logos" src="about_icons/html.png" alt="html" />
+              <img class="logos" src="about_icons/css3-logo-svgrepo-com.svg" alt="css" />
+              <img class="logos" src="about_icons/javascript-logo-svgrepo-com.svg" alt="javascript" />
+              <img class="logos" src="about_icons/php-1-logo-svgrepo-com.svg" alt="php" />
+              <img class="logos" src="about_icons/mysql-logo-svgrepo-com.svg" alt="mysql" />
+            </div>
+          </div>
+          <div class="hobbies">
+            <span>Hobbies</span>
+            <div class="svgs">
+              <img class="logos" src="about_icons/gaming.svg" alt="gaming" />
+              <img class="logos" src="about_icons/cooking.svg" alt="cooking" />
+              <img class="logos" src="about_icons/motorcycle.png" alt="motorcycle" />
+            </div>
+          </div>
+        </div>
+        <div id="about_right" class="texts">
+          <div id="about_para" class="texts">
+            <p>
+              I'm Himen Narzari, originally from the beautiful town of Tezpur.
+              My educational journey began at Tezpur Gurukul, where I laid the
+              foundation for my academic pursuits. With an impressive 91.4% in
+              my HSLC exam and a remarkable 95.6% in my higher secondary exam,
+              I've always been dedicated to achieving excellence.
+            </p>
+            <p>
+              Currently, I'm delving deep into the world of computer
+              applications. Beyond the classroom, I've gained hands-on
+              experience in backend web development, particularly with PHP and
+              MySQL.
+            </p>
+            <p>
+              My aspiration is to become a full-stack web developer, blending my
+              backend expertise with frontend skills to create seamless and
+              visually appealing web experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------ projects ------>
+
+    <section id="projects">
+      <div class="heading">PROJECTS</div>
+      <div id="projects-container">
+        <div id="we-animals" class="project">
+          <div class="img">
+            <img src="projects/we-animals.png" alt="">
+            <div class="project-info">
+              <p><strong>We Animals:</strong> A website for an animal welfare NGO featuring adoption, donations, and
+                their work.</p>
+              <a href="https://himennarzari.github.io/we-animals/" target="_blank" class="visit-btn">Visit <i class="fas fa-external-link-alt" style="color:black"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div id="http-methods" class="project">
+          <div class="img">
+            <img src="projects/http-demo.png" alt="">
+            <div class="project-info">
+              <p><strong>HTTP Methods:</strong> A web-based project demonstrating HTTP methods using interactive
+                pages.</p>
+              <a href="#" class="visit-btn">Visit <i class="fas fa-external-link-alt" style="color:black"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div id="cake-fairy" class="project">
+          <div class="img">
+            <img src="projects/cake-fairy.png" alt="">
+            <div class="project-info">
+              <p><strong>Cake Fairy:</strong> A website for a home baker with cake ordering system including custom
+                cakes and workshops.</p>
+              <a href="#" class="visit-btn">Visit <i class="fas fa-external-link-alt" style="color:black"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------ contact ------>
+
+    <section id="contact">
+      <div>
+        <div class="heading">CONTACTS</div>
+      </div>
+      <div class="container">
+        <div class="contact-left">
+          <div class="left-items">
+            <h1 class="subtitle">Contact Me</h1>
+            <div class="icon-text">
+              <div class="email">
+                <img class="social_logos" src="social_icons/icons8-email-64.png" alt="email" />
+                <p>narzarihimen@gmail.com</p>
+              </div>
+              <div class="tel">
+                <img class="social_logos" src="social_icons/icons8-telephone-64.png" alt="telephone" />
+                <p>+917086667640</p>
+              </div>
+            </div>
+            <div class="social-icons">
+              <a href="https://instagram.com/himen_narzari?igshid=NzZlODBkYWE4Ng==" target="_blank"><img
+                  class="social_logos" src="social_icons/instagram.svg" alt="instagram" /></a>
+              <a href="https://www.linkedin.com/in/himen-narzari-6b3b19255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"><img class="social_logos" src="social_icons/linkedin.svg" alt="linkdin" /></a>
+              <a href="https://x.com/NarzariHimen?t=BfwZqT7dYg6kaJyVOBomBg&s=08" target="_blank"><img
+                  class="social_logos" src="social_icons/twitter.svg" alt="twitter" /></a>
+            </div>
+            <div class="btns">
+              <button class="btn" type="submit">Download CV</button>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form id="contact-form">
+            <div class="right-items">
+              <input id="name" class="input-box" type="text" name="Name" placeholder="Your Name" required />
+              <input id="email" class="input-box" type="email" name="email" placeholder="Your Email" required />
+              <textarea id="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
+              <div class="btns">
+                <button class="btn" type="submit">Send to WhatsApp</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;&nbsp2023 Himen Narzari, all rights reserved</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
