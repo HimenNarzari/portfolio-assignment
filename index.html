@@ -1,201 +1,154 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>portfolio</title>
-  <link rel="stylesheet" href="portfolio.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Animals Tezpur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" class="css">
 </head>
 
 <body>
-  <header id="navbar">
-    <div class="logo">
-      <strong>Himen Narzari</strong>
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="dog_running2.gif" alt="Loading..." />
+            <p class="loading-text">Loading...</p>
+        </div>
     </div>
-    <div id="links">
-      <ul>
-        <li class="li_links"><a class="a-tags" href="#about">ABOUT</a></li>
-        <li class="li_links"><a class="a-tags" href="#projects">PROJECTS</a></li>
-        <li class="li_links"><a class="a-tags" href="#contact">CONTACT</a></li>
-      </ul>
+
+
+    <header>
+        <div><img src="we-animals-logo.png" alt="logo"></div>
+        <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav-links">
+            <a href="#about">About us</a>
+            <a href="#services">Services</a>
+            <a href="#dog">Help us</a>
+            <a href="#work">Our work</a>
+
+            <button class="btn">Donate<svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M224 24l0 56-56 0c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l56 0 0 56c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-56 56 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-56 0 0-56c0-13.3-10.7-24-24-24L248 0c-13.3 0-24 10.7-24 24zM559.7 392.2c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416 272 416c-8.8 0-16-7.2-16-16s7.2-16 16-16l16 0 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0-16 0-78.3 0c-29.1 0-57.3 9.9-80 28L68.8 384 32 384c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l160 0 160.5 0c29 0 57.3-9.3 80.7-26.5l126.6-93.3zm-367-8.2l.9 0c0 0 0 0 0 0c-.3 0-.6 0-.9 0z" />
+                </svg></button>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+    </section>
+
+    <section id="about" class="section">
+        <h2>ABOUT US</h2>
+        <div class="about-section">
+            <iframe id="iframe" src="https://www.youtube.com/embed/iiHTZSdemYQ?si=MNP4q4yNbAkjVoqx"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+            <div>
+                <p>At <strong>We Animals Tezpur</strong>, we believe every life matters—whether it walks on two legs or
+                    four. Founded
+                    with love and compassion, our mission is to rescue, protect, and care for the voiceless animals in
+                    and around Tezpur. From emergency rescues to vaccinations, feeding programs, and medical treatments,
+                    our dedicated team of volunteers works tirelessly to ensure that stray and abandoned animals get a
+                    second chance at life.</p>
+                <p>We operate entirely on community support and kind donations—no sponsors, no big backers—just pure
+                    heart. Whether it's helping an injured pup, spreading awareness about sterilization, or finding
+                    forever homes through adoptions, we're committed to making Tezpur a kinder place for animals.</p>
+                <p><strong>Join us. Volunteer. Donate. Speak up.</strong></p>
+                <p>Together, we can build a community where every animal is seen, heard, and loved.</p>
+            </div>
+        </div>
+        <h3>Our <span>IMPACT</span> So Far</h3>
+        <div class="impact">
+            <div><i class="fa-solid fa-syringe pulse fa-4x"></i><strong class="count"
+                    data-target="1000">0</strong><br>Vaccinations Done</div>
+            <div><i class="fa-solid fa-kit-medical pulse fa-4x"></i><strong class="count"
+                    data-target="1500">0</strong><br>Rescues Done</div>
+            <div><i class="fa-solid fa-dog pulse fa-4x"></i><strong class="count"
+                    data-target="90">0</strong><br>Adoptions/month</div>
+            <div><i class="fa-solid fa-bowl-food pulse fa-4x"></i><strong class="count"
+                    data-target="500">0</strong><br>Dogs Fed</div>
+        </div>
+
+    </section>
+
+    <section id="services" class="section services">
+        <h2>SERVICES</h2>
+        <div class="impact">
+            <div>
+                <img src="https://via.placeholder.com/100" alt="Grooming">
+                <p>Grooming at home</p>
+                <button class="btn">Enquire</button>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/100" alt="Vaccination">
+                <p>Vaccination at home</p>
+                <button class="btn">Enquire</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="dog" class="dogs">
+        <img src="dogs_.png" alt="">
     </div>
-    <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-      <path
-        d="M256 0a256 256 0 1 0 0 512A256 256 0 1 0 256 0zM135 241c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l87 87 87-87c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L273 345c-9.4 9.4-24.6 9.4-33.9 0L135 241z" />
-    </svg>
 
-  </header>
-  <main>
-    <section id="hero">
-      <div id="hero_image">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <clipPath id="blobClip">
-              <path d="M40.6,-64.6C51.7,-56.1,58.9,-43.2,67.8,-29.3C76.7,-15.5,87.1,-0.7,87.8,14.5C88.5,29.7,79.5,45.4,67,56C54.6,66.7,38.8,72.5,22.7,77C6.7,81.6,-9.6,84.9,-22.3,79.5C-34.9,74.1,-43.9,59.9,-52,47C-60.1,34.1,-67.3,22.4,-71.3,8.9C-75.3,-4.5,-75.9,-19.7,-72.3,-35.3C-68.8,-50.9,-61,-66.8,-48.2,-74.5C-35.5,-82.2,-17.7,-81.7,-1.5,-79.4C14.8,-77.1,29.6,-73.1,40.6,-64.6Z"
-                    transform="translate(100 100)" />
-            </clipPath>
-          </defs>
-          <image href="DP-1.jpg" width="100%" height="100%" clip-path="url(#blobClip)" preserveAspectRatio="xMidYMid slice" />
-        </svg>
-      </div>
-      
-      <div id="hero_text">
-        <h3>Hey There!</h3>
-        <h1>I'm a <span id="typewriter"></span></h1>
-        <h4>A passionate web developer who loves clean code, great design, and coffee ☕.</h4>
-        <a class="btn" href="#contact">Let's connect</a>
-      </div>
+    <section id="help" class="help">
+        <h2 style="text-align: center;">HELP US MAKE A DIFFERENCE</h2>
+        <p style="width:80%">Every day, countless animals suffer alone — abandoned, injured, or abused.
+            At We Animals Tezpur, we step in where no one else will — to rescue, heal, and give them the love they
+            deserve.
 
+            Your support can mean the world to a voiceless soul.
+            🧡 Join hands with us — volunteer, donate, adopt, or simply spread the word. 🧡</p>
+        <div class="help-btn-container">
+            <button class="btn">Donate<svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                    <path
+                        d="M224 24l0 56-56 0c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l56 0 0 56c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-56 56 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-56 0 0-56c0-13.3-10.7-24-24-24L248 0c-13.3 0-24 10.7-24 24zM559.7 392.2c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416 272 416c-8.8 0-16-7.2-16-16s7.2-16 16-16l16 0 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0-16 0-78.3 0c-29.1 0-57.3 9.9-80 28L68.8 384 32 384c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l160 0 160.5 0c29 0 57.3-9.3 80.7-26.5l126.6-93.3zm-367-8.2l.9 0c0 0 0 0 0 0c-.3 0-.6 0-.9 0z" />
+                </svg></button>
+            <button class="btn">Adopt <i class="fa-solid fa-shield-dog"></i></button>
+            <button class="btn">Volunteer <i class="fa-solid fa-handshake-angle"></i></button>
+        </div>
     </section>
 
-    <!------ about ------>
-
-    <section id="about">
-      <div class="heading">ABOUT ME</div>
-      <div class="container">
-        <div id="about-left">
-          <div class="tech">
-            <span>Skills</span>
-            <div class="svgs">
-              <img class="logos" src="about_icons/html.png" alt="html" />
-              <img class="logos" src="about_icons/css3-logo-svgrepo-com.svg" alt="css" />
-              <img class="logos" src="about_icons/javascript-logo-svgrepo-com.svg" alt="javascript" />
-              <img class="logos" src="about_icons/php-1-logo-svgrepo-com.svg" alt="php" />
-              <img class="logos" src="about_icons/mysql-logo-svgrepo-com.svg" alt="mysql" />
-            </div>
-          </div>
-          <div class="hobbies">
-            <span>Hobbies</span>
-            <div class="svgs">
-              <img class="logos" src="about_icons/gaming.svg" alt="gaming" />
-              <img class="logos" src="about_icons/cooking.svg" alt="cooking" />
-              <img class="logos" src="about_icons/motorcycle.png" alt="motorcycle" />
-            </div>
-          </div>
+    <section id="work" class="section">
+        <h2>OUR WORK</h2>
+        <div class="gallery">
+            <blockquote class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DIdetItv2Qp/?igsh=MXFzeG4zNThlN2hyZg=="
+                data-instgrm-version="14"></blockquote>
+            <blockquote class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DIcAlTWO7Lk/?igsh=MTI0ajZ6aXowd3M0OA=="
+                data-instgrm-version="14"></blockquote>
+            <blockquote class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/DHil15DTkGk/?igsh=MXJ3MmY2OW0yeHQ2ag=="
+                data-instgrm-version="14"></blockquote>
         </div>
-        <div id="about_right" class="texts">
-          <div id="about_para" class="texts">
-            <p>
-              I'm Himen Narzari, originally from the beautiful town of Tezpur.
-              My educational journey began at Tezpur Gurukul, where I laid the
-              foundation for my academic pursuits. With an impressive 91.4% in
-              my HSLC exam and a remarkable 95.6% in my higher secondary exam,
-              I've always been dedicated to achieving excellence.
-            </p>
-            <p>
-              Currently, I'm delving deep into the world of computer
-              applications. Beyond the classroom, I've gained hands-on
-              experience in backend web development, particularly with PHP and
-              MySQL.
-            </p>
-            <p>
-              My aspiration is to become a full-stack web developer, blending my
-              backend expertise with frontend skills to create seamless and
-              visually appealing web experiences.
-            </p>
-          </div>
-        </div>
-      </div>
+        <button class="btn">Explore <i class="fa fa-external-link" aria-hidden="true"></i></button>
     </section>
 
-    <!------ projects ------>
+    <footer>
+        <p><strong>We Animals Tezpur</strong> – Rescuing and caring for the voiceless with love and dedication.</p>
+        <p><strong>Contact:</strong> Tezpur, Assam, India | Email: weanimalstezpur@gmail.com</p>
+        <p>Website designed by Himen Narzari, MCA – Tezpur University</p>
+        <p>&copy; 2025 We Animals Tezpur. All rights reserved.</p>
+        <p>
+            <a class="footer-logo" href="https://www.facebook.com/WE.animalsfoundation/" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a class="footer-logo" href="https://www.instagram.com/we.animals.tezpur/" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a class="footer-logo" href="https://youtube.com/@weanimalstezpur?si=EuKfE5S5jquA2d9q" target="_blank"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </p>
+    </footer>
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="script.js"></script>
 
-    <section id="projects">
-      <div class="heading">PROJECTS</div>
-      <div id="projects-container">
-        <div id="we-animals" class="project">
-          <div class="img">
-            <img src="projects/we-animals.png" alt="">
-            <div class="project-info">
-              <p><strong>We Animals:</strong> A website for an animal welfare NGO featuring adoption, donations, and
-                their work.</p>
-              <a href="https://himennarzari.github.io/we-animals/" target="_blank" class="visit-btn">Visit <i class="fas fa-external-link-alt" style="color:black"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div id="http-methods" class="project">
-          <div class="img">
-            <img src="projects/http-demo.png" alt="">
-            <div class="project-info">
-              <p><strong>HTTP Methods:</strong> A web-based project demonstrating HTTP methods using interactive
-                pages.</p>
-              <a href="#" class="visit-btn">Visit <i class="fas fa-external-link-alt" style="color:black"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div id="cake-fairy" class="project">
-          <div class="img">
-            <img src="projects/cake-fairy.png" alt="">
-            <div class="project-info">
-              <p><strong>Cake Fairy:</strong> A website for a home baker with cake ordering system including custom
-                cakes and workshops.</p>
-              <a href="#" class="visit-btn">Visit <i class="fas fa-external-link-alt" style="color:black"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!------ contact ------>
-
-    <section id="contact">
-      <div>
-        <div class="heading">CONTACTS</div>
-      </div>
-      <div class="container">
-        <div class="contact-left">
-          <div class="left-items">
-            <h1 class="subtitle">Contact Me</h1>
-            <div class="icon-text">
-              <div class="email">
-                <img class="social_logos" src="social_icons/icons8-email-64.png" alt="email" />
-                <p>narzarihimen@gmail.com</p>
-              </div>
-              <div class="tel">
-                <img class="social_logos" src="social_icons/icons8-telephone-64.png" alt="telephone" />
-                <p>+917086667640</p>
-              </div>
-            </div>
-            <div class="social-icons">
-              <a href="https://instagram.com/himen_narzari?igshid=NzZlODBkYWE4Ng==" target="_blank"><img
-                  class="social_logos" src="social_icons/instagram.svg" alt="instagram" /></a>
-              <a href="https://www.linkedin.com/in/himen-narzari-6b3b19255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank"><img class="social_logos" src="social_icons/linkedin.svg" alt="linkdin" /></a>
-              <a href="https://x.com/NarzariHimen?t=BfwZqT7dYg6kaJyVOBomBg&s=08" target="_blank"><img
-                  class="social_logos" src="social_icons/twitter.svg" alt="twitter" /></a>
-            </div>
-            <div class="btns">
-              <button class="btn" type="submit">Download CV</button>
-            </div>
-          </div>
-        </div>
-        <div class="contact-right">
-          <form id="contact-form">
-            <div class="right-items">
-              <input id="name" class="input-box" type="text" name="Name" placeholder="Your Name" required />
-              <input id="email" class="input-box" type="email" name="email" placeholder="Your Email" required />
-              <textarea id="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
-              <div class="btns">
-                <button class="btn" type="submit">Send to WhatsApp</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy;&nbsp2023 Himen Narzari, all rights reserved</p>
-  </footer>
-  <script src="script.js"></script>
 </body>
 
 </html>
